@@ -341,6 +341,7 @@ class StatusPage extends BeanModel {
             incidents,
             publicGroupList,
             maintenanceList,
+            icpInfo: require("../config").icpInfo,
         };
     }
 

@@ -37,6 +37,8 @@ const localWebSocketURL = getLocalWebSocketURL();
 
 const demoMode = args["demo"] || false;
 
+const icpInfo = process.env.UPTIME_KUMA_ICP_INFO || undefined;
+
 module.exports = {
     args,
     hostname,
@@ -47,4 +49,5 @@ module.exports = {
     isSSL,
     localWebSocketURL,
     demoMode,
+    icpInfo,
 };

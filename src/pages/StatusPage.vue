@@ -576,6 +576,14 @@
                     </a>
                 </p>
 
+                <div v-if="icpInfo" class="icp-info mb-1">
+                    <a
+                        href="https://beian.miit.gov.cn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >{{ icpInfo }}</a>
+                </div>
+
                 <div class="refresh-info mb-2">
                     <div>{{ $t("lastUpdatedAt", { date: lastUpdateTimeDisplay }) }}</div>
                     <div data-testid="update-countdown-text">
@@ -710,6 +718,7 @@ export default {
             incidentHistoryLoading: false,
             incidentHistoryNextCursor: null,
             incidentHistoryHasMore: false,
+            icpInfo: null,
         };
     },
     computed: {
@@ -999,6 +1008,8 @@ export default {
 
                 this.maintenanceList = res.data.maintenanceList;
                 this.$root.publicGroupList = res.data.publicGroupList;
+
+                this.icpInfo = res.data.icpInfo;
 
                 this.loading = false;
 
