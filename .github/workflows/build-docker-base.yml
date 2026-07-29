@@ -7,6 +7,7 @@ permissions: {}
 
 jobs:
   build-docker-base:
+    if: false  # Disabled (fork: use build-docker-ghcr.yml instead)
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:

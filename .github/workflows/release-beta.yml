@@ -23,6 +23,7 @@ permissions:
 
 jobs:
   beta-release:
+    if: false  # Disabled (fork: use build-docker-ghcr.yml instead)
     runs-on: ubuntu-latest
     timeout-minutes: 120
 

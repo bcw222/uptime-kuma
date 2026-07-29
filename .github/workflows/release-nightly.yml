@@ -10,8 +10,7 @@ permissions: {}
 
 jobs:
   release-nightly:
-    # Only run on the original repository, not on forks
-    if: github.repository == 'louislam/uptime-kuma'
+    if: false  # Disabled (fork: use build-docker-ghcr.yml instead)
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:

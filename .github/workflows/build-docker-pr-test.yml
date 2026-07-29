@@ -10,6 +10,7 @@ permissions: {}
 
 jobs:
   build-docker-pr-test:
+    if: false  # Disabled (fork: use build-docker-ghcr.yml instead)
     # Only run on the original repository, not on forks
     if: github.repository == 'louislam/uptime-kuma'
     runs-on: ubuntu-latest
